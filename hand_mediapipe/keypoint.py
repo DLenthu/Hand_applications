@@ -24,5 +24,8 @@ while True:
             mpDraw.draw_landmarks(img,handlms,mpHands.HAND_CONNECTIONS)
 
     cv2.imshow("Image",img)
+    
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
 
-    cv2.waitKey(1)
+cv2.destroyAllWindows()
